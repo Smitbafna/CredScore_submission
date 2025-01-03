@@ -1,8 +1,8 @@
-**CREDSCORE**
+<h1>CREDSCORE</h1>
 
 CredScore is a decentralized credit scoring solution designed to provide fair, transparent, and privacy-preserving credit evaluations. Built on blockchain technology, CredScore ensures that users' credit scores are calculated in a decentralized, immutable, and privacy-respecting manner. This app allows users to track and manage their credit scores with confidence, as all transactions and data updates are securely handled using zero-knowledge proofs (ZKPs).
 
-**Features**
+<h2>Features</h2>
 
 **Decentralized Governance:**
 
@@ -20,7 +20,7 @@ Utilizes zero-knowledge proofs (ZKPs) to secure sensitive user data while mainta
 
 Stakeholders can vote to adjust the credit score metrics and their corresponding weights.
 
-**Getting Started**
+<h2>Getting Started</h2>
 
 
 **Prerequisites**
@@ -35,18 +35,18 @@ To run CredScore locally, you'll need:
 
    
 
-**Installation**
+<h2>Installation</h2>
 
 
 
-**1.Clone the repository:**
+**1. Clone the repository:**
 
 `git clone https://github.com/your-username/credscore.git`
 
 `cd credscore`
 
 
-**2.Install dependencies:**
+**2. Install dependencies:**
 
 For the front-end:
 
@@ -54,9 +54,10 @@ For the front-end:
 
 `npm install`
 
-**3.Run the application:**
+**3. Run the application:**
 
 `npm run dev`
+
 
 
 
@@ -67,7 +68,7 @@ Navigate to `http://localhost:3000` (or another port based on your configuration
 Users can view their credit scores, propose changes to the credit scoring weights, and participate in the governance process.
 
 
-**How It Works**
+<h2>How It Works</h2>
 
 
 **Credit Score Calculation:** 
