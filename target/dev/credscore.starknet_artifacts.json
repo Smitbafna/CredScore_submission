@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"8v9cefmehi216","package_name":"credscore","contract_name":"credit_score","module_path":"credscore::cred_score::credit_score","artifacts":{"sierra":"credscore_credit_score.contract_class.json","casm":null}}]}

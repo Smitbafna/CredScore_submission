@@ -1,0 +1,159 @@
+[
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "calculate_on_time_percent",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "payment_date",
+          "type": "uint128"
+        },
+        {
+          "name": "due_date",
+          "type": "uint128"
+        },
+        {
+          "name": "amount_due",
+          "type": "uint128"
+        },
+        {
+          "name": "amount_paid",
+          "type": "uint128"
+        }
+      ],
+      "name": "add_payment",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "on_time_percent",
+          "type": "uint128"
+        },
+        {
+          "name": "payment_ratio",
+          "type": "uint128"
+        }
+      ],
+      "name": "calculate_credit_score",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "score",
+          "type": "uint128"
+        }
+      ],
+      "name": "set_credit_score",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "new_on_time_weight",
+          "type": "uint128"
+        },
+        {
+          "name": "new_payment_ratio_weight",
+          "type": "uint128"
+        }
+      ],
+      "name": "update_scoring_weights",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "scores",
+      "outputs": [
+        {
+          "name": "",
+          "type": "mapping(address => uint128)"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "scoring_weights",
+      "outputs": [
+        {
+          "name": "",
+          "type": "mapping(address => tuple(uint128, uint128))"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proofVerificationResult",
+          "type": "int"
+        }
+      ],
+      "name": "verify_zk_proof",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "emit_event",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+  

@@ -1,0 +1,86 @@
+protocol:
+  name: CreditScoreManagementProtocol
+  version: 1.0
+  description: A decentralized protocol for managing credit scores and payment histories on the Calimero Network.
+
+entities:
+  - ContractAddress
+  - PaymentHistory
+  - CreditScore
+
+methods:
+  - name: calculate_on_time_percent
+    description: Calculates the on-time payment percentage for a given contract address.
+    parameters:
+      - caller: ContractAddress
+    returns: u128
+    
+  - name: add_payment
+    description: Records a payment and updates the payment history for a given contract address.
+    parameters:
+      - payment_date: u128
+      - due_date: u128
+      - amount_paid: u128
+      - amount_due: u128
+    returns: void
+
+  - name: add_payments_batch
+    description: Adds a batch of payments and updates the payment history for the given contract address.
+    parameters:
+      - payments: Array<(u128, u128, u128, u128)> 
+    returns: void
+
+  - name: calculate_credit_score
+    description: Calculates the credit score for the given contract address based on on-time payments and payment ratio.
+    parameters:
+      - on_time_percent: u128
+      - payment_ratio: u128
+    returns: u128
+
+  - name: set_credit_score
+    description: Sets the credit score for the caller’s contract address.
+    parameters:
+      - score: u128
+    returns: void
+
+  - name: update_scoring_weights
+    description: Updates the scoring weights for on-time payments and payment ratio for the caller’s address.
+    parameters:
+      - new_on_time_weight: u128
+      - new_payment_ratio_weight: u128
+    returns: void
+
+events:
+  - name: CreditScoreUpdated
+    description: Emitted when a credit score is updated for a user.
+    parameters:
+      - caller: ContractAddress
+      - new_score: u128
+
+  - name: PaymentAdded
+    description: Emitted when a single payment is added to the system.
+    parameters:
+      - caller: ContractAddress
+      - payment_date: u128
+      - due_date: u128
+      - amount_paid: u128
+      - amount_due: u128
+
+  - name: PaymentsBatchAdded
+    description: Emitted when a batch of payments is added to the system.
+    parameters:
+      - caller: ContractAddress
+      - total_payments: u128
+
+  - name: ScoringWeightsUpdated
+    description: Emitted when scoring weights are updated for a user.
+    parameters:
+      - caller: ContractAddress
+      - new_on_time_weight: u128
+      - new_payment_ratio_weight: u128
+
+  - name: ProofVerified
+    description: Emitted when a proof verification is successful.
+    parameters:
+      - caller: ContractAddress
+      - is_valid: bool

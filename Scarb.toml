@@ -1,0 +1,14 @@
+[package]
+name = "credscore"
+version = "0.1.0"
+edition = "2024_07"
+
+[dependencies]
+# Add dependencies like external Cairo libraries if needed
+starknet = ">=2.2.0"
+
+[dev-dependencies]
+cairo_test = "2.9.2"
+
+[[target.starknet-contract]]
+sierra = true
